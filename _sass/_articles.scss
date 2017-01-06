@@ -39,6 +39,7 @@
     position: relative;
     border-radius: $base-border-radius * 3;
     padding: 0.25em 0 0 0;
+    clear: left;
   }
   section:nth-child(even) {
     h3 {
@@ -85,6 +86,7 @@
     }
     section:nth-child(even) {
       float: right;
+      clear: right;
       padding: ($base-spacing * 2) 0 0 4%;
       &:before {
         left: 0;
@@ -150,6 +152,7 @@
 }
 .videos {
   @include clearfix;
+  margin: $base-spacing 0;
 }
 
 .price {
