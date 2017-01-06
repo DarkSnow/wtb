@@ -1,0 +1,13 @@
+{
+  "name": "wtb",
+  "version": "1.0.0",
+  "description": "Watch the Birdie",
+  "main": "index.html",
+  "scripts": {
+    "clean": "rm -r _site",
+    "backgrounds": "./_scripts/backgrounds.js",
+    "optimise": "imagemin img/*"
+  },
+  "author": "DarkSnow.net"
+}
+

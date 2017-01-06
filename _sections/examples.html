@@ -1,0 +1,18 @@
+---
+layout: section
+menu: Examples
+order: 3
+title: examples
+heading: Examples of our work
+---
+<p>Below you'll find examples of our work</p>
+<div class="videos">
+{% for example in site.examples %}
+  <article>
+  <div data-anim="rotatex">
+      <h3>{{example.title}}</h3>
+      <div class="video"><iframe src="https://player.vimeo.com/video/{{ example.vimeo }}?title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div></article>
+{% endfor %}
+</div>
+<p>We have a lot more examples of our work on our <a href="http://vimeo.com/{{ site.vimeo_id }}">Vimeo page</a>, please feel free to take a look.</p>
+

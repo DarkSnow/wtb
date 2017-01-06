@@ -1,0 +1,102 @@
+body {
+  background: $base-background-color;
+  overflow-x: hidden;
+}
+header {
+  padding: 0;
+  background: $content-background-color;
+  box-shadow: $base-box-shadow;
+  z-index: 10;
+}
+main {
+  background: $content-background-color;
+  padding-bottom: $base-spacing;
+}
+footer {
+  color: $light-gray;
+  text-align: center;
+  text-shadow: 0.1em 0.1em 0.1em #000;
+  font-family: $menu-font-family;
+  padding-bottom: 2em;
+  section {
+    font-family: $base-font-family;
+  }
+  li {
+    display: inline;
+    padding: 0 $base-spacing;
+  }
+  a {
+    color: $primary-color;
+  }
+}
+
+section {
+  @include clearfix;
+  padding: 1em 0;
+}
+article {
+  @include media($grid-collapse) {
+    @include span-columns(6);
+  }
+}
+.container {
+  @include outer-container;
+  padding: 0 1em;
+}
+p {
+  padding-bottom: 0.2em;
+}
+a img {
+  vertical-align: middle;
+}
+img.aside {
+  float: right;
+  margin: 0 0 $small-spacing $small-spacing;
+}
+.video {
+  position: relative;
+  height: 0;
+  padding: 0 0 56.25% 0; // 16:9 aspect
+  margin: 0;
+  
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+.slogan {
+  font-family: $heading-font-family;
+  font-size: modular-scale(3);
+  text-align: center;
+  color: $primary-color;
+}
+.fix {
+  height: 180px;
+  background-attachment: scroll;
+  background-size: cover;
+  background-position: 50% 50%;
+  overflow: hidden;
+  position: relative;
+  &:before, &:after {
+    content: ' ';
+    position: absolute;
+    box-shadow: $base-box-shadow;
+    width: 110%;
+    left: -5%;
+    height: 0.5em;
+  }
+  &:before {
+    top: -0.5em;
+  }
+  &:after {
+    bottom: -0.5em;
+  }
+  @include media($fix-collapse) {
+    height: 500px;
+    background-attachment: fixed;
+  }
+}
+

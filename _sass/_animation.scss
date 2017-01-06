@@ -1,0 +1,40 @@
+[data-anim] {
+  box-shadow: $base-box-shadow;
+  margin-bottom: 1em;
+  border-radius: $base-border-radius;
+  overflow: hidden;
+  background: $content-background-color;
+}
+.videos {
+  article {
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+    -webkit-perspective-origin: center top;
+    perspective-origin: center top;
+    [data-anim] {
+      -webkit-transform-origin: center top 0;
+      transform-origin: center top 0;
+    }
+  }
+}
+.timeline {
+  section > div {
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+    -webkit-perspective-origin: right center;
+    perspective-origin: right center;
+    [data-anim] {
+      -webkit-transform-origin: right center 0;
+      transform-origin: right center 0;
+    }
+  }
+  section:nth-child(even) > div {
+    -webkit-perspective-origin: left center;
+    perspective-origin: left center;
+    [data-anim] {
+      -webkit-transform-origin: left center 0;
+      transform-origin: left center 0;
+    }
+  }
+}
+

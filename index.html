@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<section id="video" class="video">
+  <iframe src="https://player.vimeo.com/video/{{ site.vimeo_intro }}?title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</section>
+{% assign parts = site.sections | sort:'order' %}
+{% for part in parts %}{% if part.published != false %}
+<section class="{{ part.title | downcase }}">
+  {% if part.hide_fix == null %}<div class="fix"></div>{% endif %}
+  <div class="container" id="{{ part.title | downcase }}">
+    {% if part.heading %}<h2>{{ part.heading }}</h2>{% endif %}
+    {{ part.content }}
+  </div>
+</section>
+{% endif %}{% endfor %}

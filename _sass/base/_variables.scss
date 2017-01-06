@@ -1,0 +1,50 @@
+// Typography
+$base-font-family: "Open Sans",$helvetica;
+$menu-font-family: "Open Sans Condensed",$helvetica;
+$modular-scale-ratio: $minor-third;
+
+$prefixes: webkit moz ms o spec;
+
+// Font Sizes
+$base-font-size: 11pt;
+$heading-font-family: "love_and_passion", "Rouge Script", cursive;
+
+// Line height
+$base-line-height: $golden;
+$heading-line-height: $golden;
+
+// Responsive grid sizes
+$grid-collapse: 40em;
+$timeline-collapse: $grid-collapse;
+$timeline-tile-collapse: 24em;
+$fix-collapse: $grid-collapse;
+
+// Other Sizes
+$base-border-radius: 0.2em;
+$base-spacing: 1em;
+$small-spacing: $base-spacing / 2;
+$base-z-index: 0;
+
+// Colors
+$blue: #477dca;
+$pink: #f08dbb;
+$dark-gray: #333;
+$medium-gray: #999;
+$light-gray: #ddd;
+$mint: #67c39e;
+$content-background-color: white;
+
+// Font Colors
+$base-background-color: $dark-gray;
+$base-font-color: $dark-gray;
+$action-color: $mint;
+$primary-color: $mint;
+
+// Border
+$base-border-color: $light-gray;
+$base-border: 1px solid $base-border-color;
+$base-box-shadow: 0 0 0.5em $dark-gray;
+
+// Forms
+$form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);

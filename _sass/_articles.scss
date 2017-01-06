@@ -1,0 +1,159 @@
+.why {
+  padding-top: 0;
+  article {
+    padding-top: 1em;
+    float: none;
+    width: auto;
+
+    @include media($grid-collapse) {
+      @include prefixer(column-count, 2, $prefixes);
+    }
+    @include media($large-screen) {
+      @include prefixer(column-count, 3, $prefixes);
+    }
+  }
+}
+.what .timeline {
+  @include clearfix;
+  background: linear-gradient(to right, $primary-color, $primary-color 2px) repeat-y 50%;
+  background-size: 2px;
+  position: relative;
+  margin-top: $base-spacing * 2;
+  padding-top: $base-spacing;
+
+  aside {
+    text-align: center;
+  }
+  
+  img {
+    width: 9em;
+    height: 9em;
+    border-radius: 4.5em;
+    border: 2px solid $primary-color;
+  }
+  h3 {
+    text-align: right;
+    padding-top: 0;
+  }
+  section {
+    position: relative;
+    border-radius: $base-border-radius * 3;
+    padding: 0.25em 0 0 0;
+  }
+  section:nth-child(even) {
+    h3 {
+      text-align: left;
+    }
+  }
+  [data-anim] {
+    padding: $base-spacing;
+  }
+  @include media($timeline-tile-collapse) {
+    aside {
+      max-width: 9em;
+      float: left;
+      margin: 0 $base-spacing 0 0;
+    }
+    section:nth-child(even) {
+      aside {
+        float: right;
+        margin: 0 0 0 $base-spacing;
+      }
+    }
+  }
+  @include media($timeline-collapse) {
+    aside {
+      max-width: 100%;
+      float: none;
+      margin: 0;
+    }
+    section {
+      float: left;
+      padding: 0 4% ($base-spacing * 2) 0;
+      width: 50%;
+      &:before {
+        content: ' ';
+        border-bottom: 2px solid $primary-color;
+        display: block;
+        position: absolute;
+        width: 10%;
+        height: 2em;
+      }
+    }
+    section:nth-child(odd):before {
+      right: 0;
+    }
+    section:nth-child(even) {
+      float: right;
+      padding: ($base-spacing * 2) 0 0 4%;
+      &:before {
+        left: 0;
+      }
+      aside {
+        max-width: 100%;
+        float: none;
+        margin: 0;
+      }
+    }
+  }
+  &:before {
+    top: $base-spacing * -1;
+  }
+  @include media($timeline-tile-collapse + $timeline-collapse) {
+    aside {
+      max-width: 9em;
+      float: left;
+      margin: 0 $base-spacing 0 0;
+    }
+    section:nth-child(even) {
+      aside {
+        float: right;
+        margin: 0 0 0 $base-spacing;
+      }
+    }
+  }
+}
+
+.what .container:after, .what .timeline:before {
+  content: ' ';
+  position: absolute;
+  display: block;
+  width: $base-spacing;
+  height: $base-spacing;
+  background: $primary-color;
+  border-radius: $base-spacing / 2;
+  left: 50%;
+  margin-left: $base-spacing / -2;
+}
+
+#examples {
+  article {
+    @media only screen and (min-width: 40em) {
+      @include span-columns(6);
+      &:nth-child(2n) {
+        @include omega();
+      }
+    }
+    @media only screen and (min-width: 55em) {
+      @include span-columns(4);
+      @include omega-reset(2n);
+      &:nth-child(3n + 3) {
+        @include omega();
+      }
+    }
+  }
+  h3 {
+    text-align: center;
+    margin: 0;
+    padding: 0.5em 0.1em;
+  }
+}
+.videos {
+  @include clearfix;
+}
+
+.price {
+  float: right;
+  color: $primary-color;
+}
+

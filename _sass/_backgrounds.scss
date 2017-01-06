@@ -1,0 +1,43 @@
+// Generate background images for all sections at all image sizes
+$bg-widths: 320 480 720 1080 1620;
+
+$current-width: 0;
+@each $width in $bg-widths {
+
+  @if $current-width == 0 {
+    .what .fix {
+      background-image: url(../img/bg/pose-#{$width}.jpg);
+    }
+    .prices .fix {
+      background-image: url(../img/bg/signing-#{$width}.jpg);
+    }
+    .examples .fix {
+      background-image: url(../img/bg/hair-#{$width}.jpg);
+    }
+    .about .fix {
+      background-image: url(../img/bg/groomsmen-#{$width}.jpg);
+    }
+    footer .fix {
+      background-image: url(../img/bg/walking-#{$width}.jpg);
+    }
+  } @else {
+    @include media($current-width * 1px) {
+      .what .fix {
+        background-image: url(../img/bg/pose-#{$width}.jpg);
+      }
+      .prices .fix {
+        background-image: url(../img/bg/signing-#{$width}.jpg);
+      }
+      .examples .fix {
+        background-image: url(../img/bg/hair-#{$width}.jpg);
+      }
+      .about .fix {
+        background-image: url(../img/bg/groomsmen-#{$width}.jpg);
+      }
+      footer .fix {
+        background-image: url(../img/bg/walking-#{$width}.jpg);
+      }
+    }
+  }
+  $current-width: $width;
+}

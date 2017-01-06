@@ -1,0 +1,84 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Open+Sans:400,700);
+
+//@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Open+Sans:400,700|Rouge+Script);
+
+@font-face {
+  font-family: 'love_and_passion';
+  src: url('love_and_passion-webfont.woff2') format('woff2'),
+       url('love_and_passion-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  @include font-feature-settings("kern", "liga", "pnum");
+  -webkit-font-smoothing: antialiased;
+  color: $base-font-color;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  font-weight: 300;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-font-family;
+  font-size: $base-font-size;
+//  line-height: $heading-line-height;
+  line-height: 1em;
+  padding: 0.718em 0 0.309em 0;
+}
+
+h3 {
+  font-size: 1.8em;
+}
+h2 {
+  font-size: 2.6em;
+}
+
+p {
+  margin: 0 0 $small-spacing;
+}
+
+a {
+  color: $action-color;
+  text-decoration: none;
+  transition: color 0.1s linear;
+  cursor: pointer;
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: darken($action-color, 15%);
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}
+
+hr {
+  border-bottom: $base-border;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  margin: $base-spacing 0;
+}
+
+strong {
+  font-weight: 700;
+}
+img,
+picture {
+  margin: 0;
+  max-width: 100%;
+}
+
+footer li {
+  white-space: nowrap;
+}

@@ -1,0 +1,27 @@
+# Site settings
+title: Watch the Birdie
+email: watchthebirdie@btinternet.com
+description: > # this means to ignore newlines until "baseurl:"
+  Watch The Birdie, Wedding Video Scotland. We specialise in quality DVD
+  productions, covering the whole of Scotland. You can also customise your
+  video with options such as Getting Ready, Last Dance, the Same Day Edit, Pop
+  Video and Marryoke.
+baseurl:  # the subpath of your site, e.g. /blog/
+url: "http://watchthebirdie.co.uk" # the base hostname & protocol for your site
+vimeo_id: user1251040
+facebook_id: watchthebirdiefilms
+vimeo_intro: 138108850
+
+# Build settings
+collections:
+- sections
+- examples
+markdown: kramdown
+
+exclude:
+- config.rb
+- package.json
+- respizer.conf.js
+- node_modules
+
+host: 0.0.0.0
