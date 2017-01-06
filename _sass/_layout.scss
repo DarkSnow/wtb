@@ -37,6 +37,9 @@ section {
 article {
   @include media($grid-collapse) {
     @include span-columns(6);
+    &:nth-of-type(2n) {
+      margin-right: 0;
+    }
   }
 }
 .container {
