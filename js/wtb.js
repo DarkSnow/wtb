@@ -36,6 +36,8 @@
  * set values over the scroll range
  */
 (function($) {
+  $('[data-anim="rotatey"]:odd').data('animstart', '-90');
+
   $.fn.dsAnimate = function(opts) {
     var settings = $.extend({
       scrollTarget: document,
