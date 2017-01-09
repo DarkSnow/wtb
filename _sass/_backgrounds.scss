@@ -17,7 +17,10 @@ $current-width: 0;
     .about .fix {
       background-image: url(../img/bg/groomsmen-#{$width}.jpg);
     }
-    footer .fix {
+    .specialities .fix {
+      background-image: url(../img/bg/mic-#{$width}.jpg);
+    }
+    extras .fix {
       background-image: url(../img/bg/walking-#{$width}.jpg);
     }
   } @else {
@@ -33,6 +36,9 @@ $current-width: 0;
       }
       .about .fix {
         background-image: url(../img/bg/groomsmen-#{$width}.jpg);
+      }
+      .extras .fix {
+        background-image: url(../img/bg/mic-#{$width}.jpg);
       }
       footer .fix {
         background-image: url(../img/bg/walking-#{$width}.jpg);
