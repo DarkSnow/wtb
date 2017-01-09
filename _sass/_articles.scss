@@ -159,4 +159,10 @@
   float: right;
   color: $primary-color;
 }
+#extras {
+  img, .video {
+    display: block;
+    margin-bottom: $small-spacing;
+  }
+}
 
