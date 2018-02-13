@@ -10,7 +10,7 @@ baseurl:  # the subpath of your site, e.g. /blog/
 url: "http://watchthebirdie.co.uk" # the base hostname & protocol for your site
 vimeo_id: user1251040
 facebook_id: watchthebirdiefilms
-vimeo_intro: 198213101
+vimeo_intro: 255629779
 
 # Build settings
 collections:
